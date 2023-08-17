@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionnaire><CREATE_DATE>03.08.2023</CREATE_DATE><route_marker><title>Маркер маршрута</title><values><value>Да</value></values></route_marker><marker><title>Маркер неблагонадёжности</title><values><value>Нет</value></values></mar
+ker><DueDiligence><title>Должная осмотрительность</title><values><value>Да</value></values></DueDiligence><SanctionRisk><title>Санкционный риск</title><values><value>Нет</value></values></SanctionRisk><P1_PROP_1><title>Место заполне
+ния</title><values><value>Россия, Саратовская обл, г Энгельс</value></values></P1_PROP_1><P1_PROP_2_1><title>2.1. ИНН (TAX ID), а также полное (краткое) фирменное наименование всех юридических лиц и полные ФИО всех физических лиц, у
+частвующих в сделке, к которой заполняется настоящая анкета</title><values><value><INN><title>ИНН</title><values><value>6449967891</value></values></INN><NAME><title>Наименование организации</title><values><value>ООО &quot;Техника&q
+uot;</value></values></NAME><FILE><title>файл</title><document xlink="https://kyc-compliance.ru/upload/iblock/224/nxsy7djit55qahphx7yub3p9wfh4brqy/pdf24_merged.pdf">Скан копия устава для: ООО &quot;Техника&quot;.pdf</document></FILE
+><P2_PROP_3_1><title>3.1. Идентификационный номер налогоплательщика</title><values><value>6449967891</value></values></P2_PROP_3_1><P2_PROP_3_2><title>3.2. Страна регистрации Вашей организации</title><values><value>Российская Федера
+ция</value></values></P2_PROP_3_2><P2_PROP_3_3><title>3.3. Дата регистрации Вашей организации</title><values><value>2003-03-14</value></values></P2_PROP_3_3><P2_PROP_3_4><title>3.4. Способ образования Вашей организации</title><value
+s><value>Учреждение</value></values></P2_PROP_3_4><P2_PROP_3_5><title>3.5. Сведения об учредительных документах Вашей организации</title><values><value>Устав №б\н от 01.04.2021года</value></values></P2_PROP_3_5><P2_PROP_3_6><title>3
+.6. Сведения о Вашей государственной регистрации (государственной регистрации Вашей организации)</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/1b7/2gix2x104abidr2hfukh73tejy3klz6d/свидетельство о рег
+истрации юр лица.pdf">свидетельство о регистрации юр лица.pdf</document></value><value>Серия 64 №0003279 64 от 14.03.2003г</value></values></P2_PROP_3_6><P2_PROP_3_7><title>3.7. Сведения о постановке Вас (Вашей организации) на учет
+в налоговом органе</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/8eb/51a2hd0nqrhuk3xskzo114ea9sbnecss/свидетельство ИНН.pdf">свидетельство ИНН.pdf</document><document xlink="https://kyc-compliance.ru
+/upload/iblock/ad2/w631pw5tpy5dqrsjyzd22o43xy24e7us/свидетельство ОГРН.pdf">свидетельство ОГРН.pdf</document></value><value>Свидетельство Серия 65 № 000327964 от 14.032003г.</value></values></P2_PROP_3_7><P2_PROP_3_8><title>3.8. Юри
+дический адрес Вашей организации</title><values><value>413111 область Саратовская   город Энгельс   улица Строительная дом 1   квартира 100</value></values></P2_PROP_3_8><P2_PROP_3_9><title>3.9. Совпадает ли фактический адрес Вашей
+организации с юридическим адресом?</title><values><value>Саратовская обл, г Энгельс, пр-кт Химиков, зд 34в </value></values></P2_PROP_3_9><P2_PROP_3_10><title>3.10. Находится ли Ваша организация в стадии банкротства, ликвидации или
+реорганизации?</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/fee/6c1gl5m61xtwulqudalv6jgxowwa82ln/Справка на 25 01 19.pdf">Справка на 25 01 19.pdf</document></value><value>Нет</value></values></P2_PR
+OP_3_10><P2_PROP_3_11><title>3.11. Основной профиль Вашей деятельности (деятельности Вашей организации)</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/fff/a2v8h4ss4q4gnasi4vcmtc6juvbt9079/Сертификат с
+епараторы 22г.pdf">Сертификат сепараторы 22г.pdf</document></value><value>Производство магнитный сепараторов,станочной остнастки</value><value>ИНН 6321452627 ООО ПК &quot;ТЛ-ГИДРАВЛИКА&quot;</value></values></P2_PROP_3_11><P2_PROP_3
+_12><title>3.12. Имеются ли у Вас (Вашей организации) специальные разрешения (лицензии) на осуществление лицензируемых видов деятельности?</title><values><value>Нет</value></values></P2_PROP_3_12><P2_PROP_3_13><title>3.13. Есть ли у
+ Вашей организации сертификаты на соответствие требованиям ISO, IATF?</title><values><value>Нет</value></values></P2_PROP_3_13><P2_PROP_3_14><title>3.14. Единоличный исполнительный орган (единоличные исполнительные органы) (далее -
+ЕИО), в том числе управляющая организация (при наличии) Вашей организации</title><values><value>Директор Труханов Михаил Александрович</value></values></P2_PROP_3_14><P2_PROP_3_15><title>3.15. Является ли подписантом договора и наст
+оящей анкеты Единоличный исполнительный орган Вашей организации, указанный в п. 3.14?</title><values><value>Да</value></values></P2_PROP_3_15><P2_PROP_3_16><title>3.16. Главный бухгалтер Вашей организации</title><values><value><docu
+ment xlink="https://kyc-compliance.ru/upload/iblock/b9a/xcrre3pdmx77guss8pawrq85cmeczoac/приказ 1.pdf">приказ 1.pdf</document></value><value>Омельчук Любовь Ивановна</value></values></P2_PROP_3_16><P2_PROP_3_17><title>3.17. Финансов
+ый директор и/или Коммерческий директор Вашей организации</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/816/m2qc2rp0jg2wmqtayzhbwqw1wor9jyq1/Отсутствие данных должностей.pdf">Отсутствие данных должно
+стей.pdf</document></value><value> Финансовый директор и/или Коммерческий директор отсутствует</value></values></P2_PROP_3_17><P2_PROP_3_18><title>3.18. Технический директор и/или Директор по производству Вашей организации</title><v
+alues><value><document xlink="https://kyc-compliance.ru/upload/iblock/816/m2qc2rp0jg2wmqtayzhbwqw1wor9jyq1/Отсутствие данных должностей.pdf">Отсутствие данных должностей.pdf</document></value><value>Технический директор и/или Директ
+ор по производству отсутствует</value></values></P2_PROP_3_18><P2_PROP_3_19><title>3.19. Имеется ли в Вашей организации  Совет директоров (Наблюдательный совет) или иной коллегиальный орган управления согласно Уставу?</title><values
+><value>Нет</value></values></P2_PROP_3_19><P2_PROP_3_20><title>3.20. Имеется ли у Вашей организации коллегиальные исполнительные органы (Правление, Дирекция и т.п.) согласно Уставу?</title><values><value>Нет</value></values></P2_PR
+OP_3_20><P2_PROP_3_21><title>3.21. Сведения об акционерах (участниках) Вашей организации</title><values><value>644900434610 - Труханов Михаил Александрович - 100%;</value></values></P2_PROP_3_21><P2_PROP_3_22><title>3.22. Имеются ли
+ у Вашей организации бенефициарные владельцы?</title><values><value>Да</value><value>Труханов Михаил Александрович - 100%;</value></values></P2_PROP_3_22><P2_PROP_3_23><title>3.23. Имеются ли у Вашей организации контролирующие лица?
+</title><values><value>Да</value><value>Труханов Михаил Александрович - 100%;</value></values></P2_PROP_3_23><P2_PROP_3_24><title>3.24. Есть ли у Вашей организации подконтрольные лица?</title><values><value>Нет</value></values></P2_
+PROP_3_24><P2_PROP_3_25><title>3.25. Есть ли у Вашей организации обособленные подразделения?</title><values/></P2_PROP_3_25><P2_PROP_3_26><title>3.26. Принадлежит ли Ваша организация к группе компаний (лиц)?</title><values><value>Не
+т</value></values></P2_PROP_3_26><P2_PROP_3_27><title>3.27. Имеются ли у Вас (Вашей организации и/или группы компаний (лиц), в которую входит Ваша организация) интернет-страницы?</title><values><value>Нет</value></values></P2_PROP_3
+_27><P2_PROP_3_28><title>3.28. Имеются ли публикации в СМИ о Вашей организации?</title><values><value>Нет</value></values></P2_PROP_3_28><P2_PROP_3_29><title>3.29. Сведения о начале контрактного взаимодействия с нашим предприятием</
+title><values><value>2017.05.30</value></values></P2_PROP_3_29><P2_PROP_3_30><title>3.30. Сведения о доле нашего предприятия в Вашем общем объеме реализации (общем объеме реализации Вашей организации)</title><values><value>5%</value
+></values></P2_PROP_3_30><P2_PROP_3_37><title>3.37. Сведения о Ваших основных видах деятельности (основных видах деятельности Вашей организации)</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/c88/hj8p
+luchfm8tfkd5xzba20anq16inu3s/ul-1036404909034-20230803105458.pdf">ul-1036404909034-20230803105458.pdf</document></value><value>47.99 Торговля розничная прочая вне магазинов, палаток, рынков&#13;
+28.29.12 Производство оборудования и установок для фильтрования и очистки жидкостей</value></values></P2_PROP_3_37><P2_PROP_4_1><title>4.1. Находятся ли Ваши транспортные средства (транспортные средства Вашей организации) в собствен
+ности или Вы пользуетесь ими по договору лизинга?</title><values><value>Собственность</value></values></P2_PROP_4_1><P2_PROP_4_2><title>4.2. Находятся ли Ваше оборудование (машины, станки)     (оборудование (машины, станки) Вашей ор
+ганизации) в собственности или Вы пользуетесь им по договору аренды?</title><values/></P2_PROP_4_2><P2_PROP_4_3><title>4.3. Находятся ли Ваши производственные и складские площади (производственные и складские площади Вашей организац
+ии) в собственности или аренде?</title><values/></P2_PROP_4_3><P2_PROP_4_4><title>4.4. Находятся ли Ваши офисные помещения (офисные помещения Вашей организации) в собственности или в аренде?</title><values><value><document xlink="ht
+tps://kyc-compliance.ru/upload/iblock/89a/19akmxd1ygbz0dvll1ez1mvi51025snk/аренда 2021.pdf">аренда 2021.pdf</document></value><value></value></values></P2_PROP_4_4><P2_PROP_4_5><title>4.5. Имеются ли у Вас (Вашей организации) опасны
+е производственные объекты (далее - ОПО)?</title><values><value>Нет</value></values></P2_PROP_4_5><P2_PROP_4_6><title>4.6. Сведения о штатной численности Ваших сотрудников (сотрудников Вашей организации)</title><values><value><docum
+ent xlink="https://kyc-compliance.ru/upload/iblock/935/ytj526svnfq596ex4vqn6k7cn010i371/штатное расписание 2023г.pdf">штатное расписание 2023г.pdf</document></value><value>Штатная численность 12человек</value></values></P2_PROP_4_6>
+<P2_PROP_5_1><title>5.1. Применяете ли Вы (Ваша организация) общую систему налогообложения или один из специальных режимов? </title><values><value>Общая</value></values></P2_PROP_5_1><P2_PROP_5_2><title>5.2. Имеются ли у Вас (Вашей
+организации) неурегулированные разногласия с налоговыми органами?</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/fa8/q4fw1ht3dgcga2k0732rqevei07gdozk/Справка об отсутствии задолженности.pdf">Справка о
+б отсутствии задолженности.pdf</document></value><value>Нет</value></values></P2_PROP_5_2><P2_PROP_5_3><title>5.3. Итоги налоговых проверок за последние 3 года</title><values><value>небыло</value></values></P2_PROP_5_3><P2_PROP_5_4>
+<title>5.4. Сведения о Вашей налоговой нагрузке (налоговой нагрузке Вашей организации) за последний отчетный год</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/034/0z04thu6rqyy3n9rjy669ll25cwh3c3v/Дек
+ларация 34 2022 квит.pdf">Декларация 34 2022 квит.pdf</document></value><value>0.83</value></values></P2_PROP_5_4><P3_PROP_6_2><title>6.2. Меняли ли Вы когда-либо свои фамилию, имя, отчество?</title><values><value>Нет</value></value
+s></P3_PROP_6_2><P3_PROP_6_5><title>6.5. Совпадает ли Ваш адрес фактического пребывания с адресом регистрации? </title><values><value>Да</value></values></P3_PROP_6_5><P3_PROP_6_6><title>6.6. Имеются ли у Вас подконтрольные лица?</t
+itle><values><value>Нет</value></values></P3_PROP_6_6></value></values></P1_PROP_2_1><P1_PROP_2_2><title>2.2. Роль, в которой выступаете Вы (Ваша организация) в сделке, к которой заполняется настоящая анкета</title><values><value>По
+ставщик</value></values></P1_PROP_2_2><P1_PROP_2_3><title>2.3. Участвуют ли какие-либо третьи лица (посредники, агенты и др.) в сделке, к которой заполняется настоящая анкета ?</title><values><value>Нет</value></values></P1_PROP_2_3
+><P1_PROP_2_5><title>2.5. Являетесь ли Вы (Ваша организация) производителем поставляемой продукции (самостоятельно ли Вы (Ваша организация) выполняете работы по договору подряда или оказываете услуги нашему предприятию)?</title><val
+ues><value>Да</value></values></P1_PROP_2_5><P1_PROP_2_6><title>2.6. Имеются ли в составе поставляемой Вами (Вашей организацией) продукции детали (материалы, комплектующие, технологии) иностранного производства? </title><values><val
+ue>Нет</value></values></P1_PROP_2_6><P1_PROP_2_7><title>2.7. Предмет сделки, к которой заполняется настоящая анкета</title><values><value>Поставка продукции</value></values></P1_PROP_2_7><RESIDENT><title>Являетесь ли вы / ваша комп
+ания резидентом РФ?</title><values><value>Y</value></values></RESIDENT><COMPANY><title>Предприятие, с которым у Вас (Вашей организации) заключен (планируется к заключению) договор (соглашение)</title><values><value><id>124848</id><d
+esc>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ <УПРАВЛЯЮЩАЯ КОМПАНИЯ <ГРУППА ГАЗ></desc></value></values></COMPANY><KUR_FIO><title>ФИО куратора договора со стороны нашего предприятия</title><values><value>Маклакова Ирина Ивановна</val
+ue></values></KUR_FIO><KUR_EMAIL><title>Электронный адрес куратора договора со стороны нашего предприятия</title><values><value>Maklakovaii@gaz.ru</value></values></KUR_EMAIL><CONTRPAR_TYPE><title>Тип контрагента, к которому относит
+есь Вы (Ваша организация)</title><values><value>UL</value></values></CONTRPAR_TYPE><CONTRACT_TYPE><title>Тип договора (соглашения), к которому заполняется настоящая анкета комплексной проверки контрагента</title><values><value>1</va
+lue></values></CONTRACT_TYPE><P4_PROP_7_1><title>7.1. Финансовые организации, участвующие в осуществлении расчетов по сделке</title><values><value><value_1>6449967891</value_1><value_1>ООО &quot;Техника&quot;</value_1><value_1>
+    413111, Саратовская &#13;
+        область, ЭМО, г. Энгельс, ул. &#13;
+         Строительная, д.1, кв.100                                   &#13;
+        Факт. Адрес: 413116, г. Энгельс, пр-т&#13;
+        Химиков 1&#13;
+        Почтовый адрес: 413100, &#13;
+        ул. Коммунистическая, 35, ОПС, а\я 7&#13;
+         тел/ факс (845-3) 76-77-26,76-77-25&#13;
+        ИНН/КПП 6449967891/644901001                                                                                                               &#13;
+        Р/сч 40702810112550045284                                                                                                                           &#13;
+        ФИЛИАЛ &quot;Корпоративный&quot; ПАО    &#13;
+        &quot;СОВКОМБАНК&quot;     Г. МОСКВА &#13;
+         БИК 044525360                                                         &#13;
+         К/сч 30101810445250000360                                &#13;
+</value_1></value><value><value_2>4401116480</value_2><value_2>ПАО &quot;СОВКОМБАНК&quot;</value_2><value_2>Р/сч 40702810112550045284
+                        &#13;
+        ФИЛИАЛ &quot;Корпоративный&quot; ПАО    &#13;
+        &quot;СОВКОМБАНК&quot;     Г. МОСКВА &#13;
+         БИК 044525360                                                         &#13;
+         К/сч 30101810445250000360  &#13;
+</value_2></value></values></P4_PROP_7_1><P4_PROP_7_2><title>7.2. Является ли сделка возмездной?</title><values><value>Российский рубль (RUB) Россия</value></values></P4_PROP_7_2><P4_PROP_7_3><title>7.3. Укажите условия оплаты по сд
+елке</title><values><value>Предоплата</value></values></P4_PROP_7_3><P5_PROP_8_1><title>8.1. Укажите, введены ли какие-либо экспортные ограничения в отношении продаваемой продукции и существует ли необходимость получать разрешение н
+а экспорт.</title><values><value>Нет</value></values></P5_PROP_8_1><P6_PROP_9_1><title>9.1. Контрагент обязуется незамедлительно (как только ему станет известно об этом) в письменной форме раскрывать информацию об изменении любых св
+едений, предоставленных в настоящей Анкете.</title><values><value>Да</value></values></P6_PROP_9_1><P6_PROP_9_2><title>9.2. Контрагент обязуется не реже одного раза в год предоставлять всю необходимую и достоверную информацию о себе
+ для проведения стандартной процедуры комплаенс-проверки контрагента по форме настоящей Анкеты.</title><values><value>Да</value></values></P6_PROP_9_2><P6_PROP_9_3><title>9.3. Лицо, подписавшее настоящую Анкету от имени ЮЛ, должным
+образом уполномочено ЮЛ.</title><values><value>Да</value></values></P6_PROP_9_3><P6_PROP_9_4><title>9.4. Подписывая настоящую Анкету, ФЛ дает свое информированное согласие на обработку своих персональных данных для цели проведения п
+роцедуры стандартной комплексной комплаенс-проверки контрагента.</title><values><value>Да</value></values></P6_PROP_9_4><STATUS><title>Статус</title><values><value>На доработке</value></values></STATUS><FILE_SANCTIONS><title>Файл са
+нкций контрагентов</title><values><value><document xlink="https://kyc-compliance.ru/upload/iblock/d39/xw4nicqkmzocgy48v62c51ufqy6mkden/all_sanctions_cp_Q_30219.pdf">all_sanctions_cp_Q_30219.pdf</document></value></values></FILE_SANC
+TIONS><TURNOVER><title>Превысит ли планируемый годовой оборот между Вами (Вашей организацией) и нашим предприятием 1 млн. рублей (совокупно по всем действующим договорам)? Выберите ответ <Да>, если годовой оборот между Вами (Вашей о
+рганизацией) и нашим предприятием за прошлый период (год) превысил 1 млн. рублей или превысит в будущем периоде</title><values><value>Y</value></values></TURNOVER></questionnaire>
