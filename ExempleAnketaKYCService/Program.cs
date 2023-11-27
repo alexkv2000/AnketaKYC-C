@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -9,14 +10,9 @@ using System.Xml.Serialization;
 using Newtonsoft.Json;
 using System.Net;
 using System.Threading;
-using System.Threading.Tasks;
-
-
 using ExempleAnketaKYCService.DeserializeClasses;
 using GAZ.AnketaKYC;
-
-/*using System.Text;
-using System.Threading.Tasks;*/
+using FileInfo = System.IO.FileInfo;
 
 namespace ExempleAnketaKYCService
 {
@@ -25,88 +21,32 @@ namespace ExempleAnketaKYCService
         public Program()
         {
         }
-        //static HttpClient client = new HttpClient();
 
-        //public static url = @""
-
-        static async Task Main(string[] args)
+        async Task Main(string[] args)
         {
-            var start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-            Console.WriteLine("Start app");
-            //GetAnkets(); // Получение списка
-            //GetAnketInfo(34477);// получение информации по анкете(XML)
+            DownloadStage downloadStage = new DownloadStage();
+            List<string> listGUID = new List<string>();
+            listGUID.Add("34477");
+            downloadStage.GUID = listGUID;
+
+            Dictionary<string, string> listFilesDictionary = new Dictionary<string, string>();
+            listFilesDictionary.Add("https://kyc-compliance.ru/upload/iblock/fc8/wkqkefum64oritimkmmkzgl40z2dpn74/Анкета-НАК.pdf", downloadStage.GUID[0]);
+            listFilesDictionary.Add("https://kyc-compliance.ru/xls_files/ques_34477.xls", downloadStage.GUID[0]);
+            listFilesDictionary.Add("https://kyc-compliance.ru/upload/iblock/c76/geoymcnr6wfhaoetmmfbwhesik22g821/Скан копия устава дляt ООО dСАФ-ХОЛЛАНД Русq.pdf", downloadStage.GUID[0]);
+            listFilesDictionary.Add("https://kyc-compliance.ru/upload/iblock/6c4/x570ulje3oaw7vds5nag5d14dw9jk6ci/RUS_Minutes_extraordinary meeting 2022.11.03_signed.PDF", downloadStage.GUID[0]);
+            listFilesDictionary.Add("https://kyc-compliance.ru/upload/iblock/0ba/r002fdgqzzkeaxw3kfjd2p3qlapy8tv8/egrul.pdf", downloadStage.GUID[0]);
+            listFilesDictionary.Add("https://kyc-compliance.ru/upload/iblock/9ce/m6vu7h1ax0i1u0moyd8ykdseh88fdloy/beneficiar.pdf", downloadStage.GUID[0]);
+            downloadStage.listFiles = listFilesDictionary;
+                        
+            long start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            Console.WriteLine($"время старта {(DateTimeOffset.FromUnixTimeMilliseconds(start))}");
+
+            await GetAnkets(downloadStage); // Получение списка
+            //await GetAnketInfo(34477);// получение информации по анкете(XML)
             //Console.ReadKey();
-            String[] sFiles = {"https://kyc-compliance.ru/upload/iblock/fc8/wkqkefum64oritimkmmkzgl40z2dpn74/Анкета-НАК.pdf",
-            "https://kyc-compliance.ru/xls_files/ques_34477.xls",
-            "https://kyc-compliance.ru/upload/iblock/c76/geoymcnr6wfhaoetmmfbwhesik22g821/Скан копия устава дляt ООО dСАФ-ХОЛЛАНД Русq.pdf",
-            "https://kyc-compliance.ru/upload/iblock/6c4/x570ulje3oaw7vds5nag5d14dw9jk6ci/RUS_Minutes_extraordinary meeting 2022.11.03_signed.PDF",
-            "https://kyc-compliance.ru/upload/iblock/0ba/r002fdgqzzkeaxw3kfjd2p3qlapy8tv8/egrul.pdf",
-            "https://kyc-compliance.ru/upload/iblock/9ce/m6vu7h1ax0i1u0moyd8ykdseh88fdloy/beneficiar.pdf"};
-             String sPathFiles = "c:/Downloads/34477/";
-             await DownloadFiles(10,sFiles,sPathFiles);
-             var stop = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-             Console.WriteLine("STOP");
-             //Console.ReadKey();
-             
-             DateTimeOffset dateTimeOffsetStart = DateTimeOffset.FromUnixTimeMilliseconds(start);
-             DateTimeOffset dateTimeOffsetStop = DateTimeOffset.FromUnixTimeMilliseconds(stop);
-             Console.WriteLine((dateTimeOffsetStop - dateTimeOffsetStart));
-            // Console.WriteLine((dateTimeOffsetStart).ToString("yyyy-MM-dd HH:mm:ss.fff"));
-           //  Console.WriteLine((dateTimeOffsetStop).ToString("yyyy-MM-dd HH:mm:ss.fff"));
-           //00:00:03.3540000 -6
-           //00:00:04.0610000 -1
-           //00:00:03.4600000 -2
-           //00:00:03.6810000 -4
-           
-        }
-
-        public static async Task DownloadFiles(int maxParallelDownload,string[] urls,string filePaths)
-        {
-            Console.WriteLine(maxParallelDownload);
-            FileDownloader downloader = new FileDownloader(maxParallelDownloads: maxParallelDownload); // Ограничить до 2 потоков
-            await downloader.DownloadFilesWithLimitedParallelism(urls, filePaths);
-        }
-
-        public class FileDownloader
-        {
-            private SemaphoreSlim semaphore;
-
-            public FileDownloader(int maxParallelDownloads)
-            {
-                semaphore = new SemaphoreSlim(maxParallelDownloads);
-            }
-
-            public async Task DownloadFilesWithLimitedParallelism(string[] urls, string pathFile)
-            {
-
-                Task[] downloadTasks = new Task[urls.Length];
-        
-                for (int i = 0; i < urls.Length; i++)
-                {
-                    string url = urls[i];
-                    string filePath = pathFile + Path.GetFileName(urls[i]);
             
-                    downloadTasks[i] = Task.Run
-                    (
-                        async () =>
-                    {
-                        await semaphore.WaitAsync(); // Ожидаем доступ к семафору
-                        try
-                        {
-                            using (WebClient client = new WebClient())
-                            {
-                                await client.DownloadFileTaskAsync(url, filePath);
-                            }
-                        }
-                        finally
-                        {
-                            semaphore.Release(); // Освобождаем семафор после выполнения задачи
-                        }
-                    });
-                }
-        
-                await Task.WhenAll(downloadTasks);
-            }
+            long stop = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            Console.WriteLine($"время остановки {(DateTimeOffset.FromUnixTimeMilliseconds(stop))}");
         }
         public class PerformersGroupInfo
         {
@@ -233,7 +173,9 @@ namespace ExempleAnketaKYCService
             using (HttpClient client = new HttpClient())
             {
                 string url = $"https://kyc-compliance.ru/api/set_status.php?ID={id}&STAT={status}";
-                client.DefaultRequestHeaders.Authorization = AuthorizationKYC.AuthorKYC;
+               // AuthorizationKYC authorizationKYC = new AuthorizationKYC();
+
+                //client.DefaultRequestHeaders.Authorization = authorizationKYC.AuthorKyc;
                // HttpResponseMessage Response = client.GetAsync(url).GetAwaiter().GetResult();
                 HttpResponseMessage Response = await client.GetAsync(url);
                 Console.WriteLine("ReasonPhrase: " + Response.ReasonPhrase);
@@ -257,70 +199,53 @@ namespace ExempleAnketaKYCService
         /// Получение списка id анкет готовых для выгрузки
         /// </summary>
         /// <returns></returns>
-        async public static void GetAnkets()
+        async public static Task GetAnkets(DownloadStage downloadStage)
         {
             string rez = null;
 
             using (HttpClient client = new HttpClient())
             {
+
                 string URL = "https://kyc-compliance.ru/api/get_questionnaires.php";//Получение списка id анкет готовых для выгрузки
-
+                //client.BaseAddress = new Uri(URL);
                 client.DefaultRequestHeaders.Authorization = AuthorizationKYC.AuthorKYC;
-
+                // HttpResponseMessage Response = client.GetAsync(URL).GetAwaiter().GetResult();
                 HttpResponseMessage Response = await client.GetAsync(URL);
                 Console.WriteLine("ReasonPhrase: " + Response.ReasonPhrase);
                 Console.WriteLine("Content: " + Response.RequestMessage.Content);
-
+                // rez = Response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
                 rez = await Response.Content.ReadAsStringAsync();
             }
-            Console.WriteLine("*******************");
             Console.WriteLine(rez);
-            Console.WriteLine("*******************");
+
             DownloadQuestionnaires AnketKYCs = null;
 
             using (TextReader reader = new StringReader(rez))
             {
                 AnketKYCs = (DownloadQuestionnaires)new XmlSerializer(typeof(DownloadQuestionnaires)).Deserialize(reader);
                 Console.WriteLine($"Получено карточек от сервиса Анкета KYC новых: {AnketKYCs.NEW.IDs.Count} на обновление: {AnketKYCs.RETURN.IDs.Count}");
-                if (AnketKYCs.NEW.IDs.Count > 0)
-                {
-                    Console.WriteLine("NEW");
-                    foreach (var VARIABLE in AnketKYCs.NEW.IDs)
-                    {
-                        Console.WriteLine(VARIABLE);
-                    }
-                }
-                if (AnketKYCs.RETURN.IDs.Count > 0)
-                {
-                    Console.WriteLine("RETURN");
-                    foreach (var VARIABLE in AnketKYCs.RETURN.IDs)
-                    {
-                        Console.WriteLine(VARIABLE);
-                    }
-                }
+                downloadStage.GUID = AnketKYCs.NEW.IDs;
             }
+            // return AnketKYCs;
+            Console.WriteLine(AnketKYCs.ToString());
         }
+
 
         /// <summary>
         /// Получение xml файла анкеты (пока в тестовом формате) по id анкеты
         /// </summary>
         /// <returns></returns>
-        async public static void GetAnketInfo(int id) //был тип string
+        async public static Task GetAnketInfo(int id) //был тип string
         {
             string rez = null;
-            string mess = "";
             string URL = $"https://kyc-compliance.ru/api/download_questionnaires.php?ID={id}"; //Получение списка id анкет готовых для выгрузки
-            Console.WriteLine(URL);
+            Console.WriteLine($"Ссылка на анкету : {URL}");
 
             using (HttpClient client = new HttpClient())
             {
-                //client.BaseAddress = new Uri(URL);
+                client.BaseAddress = new Uri(URL);
                 client.DefaultRequestHeaders.Authorization = AuthorizationKYC.AuthorKYC;
-                //HttpResponseMessage Response = client.GetAsync(URL).GetAwaiter().GetResult(); //заменил на : =>
-                HttpResponseMessage Response = await client.GetAsync(URL);
-                // rez = Response.Content.ReadAsStringAsync().GetAwaiter().GetResult(); //заменил на : => 
-                rez = await Response.Content.ReadAsStringAsync();
-                Response.Dispose();
+                rez = await client.GetStringAsync(URL);
             }
             Console.WriteLine(rez);
 
@@ -416,7 +341,8 @@ namespace ExempleAnketaKYCService
             Console.WriteLine("1 Start GetFile URL:" + URL);
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = AuthorizationKYC.AuthorKYC;
+                //AuthorizationKYC authorizationKYC =new AuthorizationKYC();
+                //client.DefaultRequestHeaders.Authorization = authorizationKYC.AuthorKyc;
                 Console.WriteLine("2 Start Download");
                // using (HttpResponseMessage response = client.GetAsync(URL).GetAwaiter().GetResult())
                 using (HttpResponseMessage response = await client.GetAsync(URL))
@@ -444,25 +370,73 @@ namespace ExempleAnketaKYCService
         /// <summary>
         /// Авторизация в сервисе KYC
         /// </summary>
-        public static class AuthorizationKYC
+        public class AuthorizationKYC
         {
-            /// <summary>
-            /// Логин для сервиса KYC
-            /// </summary>
-            private static string username = "api";
-            /// <summary>
-            /// Пароль для сервиса KYC
-            /// </summary>
-            private static string pwd = "szuWm7^8S184S05%FNy!";
-            /// <summary>
-            /// Авторизация для сервиса KYC
-            /// </summary>
-            public static readonly AuthenticationHeaderValue AuthorKYC = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{username}:{pwd}")));
+        //     /// <summary>
+        //     /// Логин для сервиса KYC
+        //     /// </summary>
+        public static string username = "api";
+        //     /// <summary>
+        //     /// Пароль для сервиса KYC
+        //     /// </summary>
+        public static string pwd = "szuWm7^8S184S05%FNy!";
+        //     /// <summary>
+        //     /// Авторизация для сервиса KYC
+        //     /// </summary>
+        public static readonly AuthenticationHeaderValue AuthorKYC = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{username}:{pwd}")));
+        public AuthenticationHeaderValue AuthorKyc { get; }
         }
 
 
     }
 
+    public class AuthorizationKYC
+    {
+        private string username;
+        private string pwd;
+        public readonly AuthenticationHeaderValue AuthorKyc;
+        // private Boolean singltone;
+        public AuthorizationKYC()
+        {
+            // if (!singltone)
+            // {
+                username = "api";
+                pwd = "szuWm7^8S184S05%FNy!";
+                AuthenticationHeaderValue AuthorKYC = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{username}:{pwd}")));
+                //     singltone = true;
+                // }
+                // Console.WriteLine("mes: соединение уже установлено.");
+
+        }
+
+        public void Deconstruct()
+        {
+            this.username="";
+            this.pwd="";
+            // this.singltone=false;
+        }
+
+        public AuthorizationKYC(string username, string pwd, AuthenticationHeaderValue pAuthorKYC)
+        {
+            this.username = username;
+            this.pwd = pwd;
+            this.AuthorKyc = pAuthorKYC;
+        }
+
+        public string Username
+        {
+            get => username;
+            set => username = value;
+        }
+
+        public string Pwd
+        {
+            get => pwd;
+            set => pwd = value;
+        }
+
+        public AuthenticationHeaderValue pAuthorKyc => AuthorKyc;
+    }
     public static class AnketKYCServiceHelper
     {
         /// <summary>
@@ -559,7 +533,10 @@ namespace ExempleAnketaKYCService
             return string.IsNullOrWhiteSpace(str);
         }
     }
-
-
-
+    
+    public class DownloadStage
+    {
+        internal List<string> GUID;
+        internal Dictionary<string, string> listFiles;
+    }
 }

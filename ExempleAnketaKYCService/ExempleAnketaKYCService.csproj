@@ -57,6 +57,7 @@
     <Compile Include="DeserializeClasses\ChangeStatusResponse.cs" />
     <Compile Include="DeserializeClasses\DownloadQuestionnaires.cs" />
     <Compile Include="DeserializeClasses\QuestionnaireInfo.cs" />
+    <Compile Include="DownloadFilesKYC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
