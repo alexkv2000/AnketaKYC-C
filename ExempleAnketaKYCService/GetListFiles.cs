@@ -16,17 +16,6 @@ namespace ExempleAnketaKYCService
     {
         public static async Task Main(string[] args)
         {
-        //     Task<List<string>> list = null;
-        //     // await Task.Run(() =>
-        //     // {
-        //         list = GetList(args[0]);
-        //     // });
-        //     
-        // }
-        //
-        // private static async Task<List<String>> GetList(string s)
-        // {
-            // Создаем rez - XML строку
             string rez = null;
             string URL =
                 $"https://kyc-compliance.ru/api/download_questionnaires.php?ID={args[0]}"; //Получение списка id анкет готовых для выгрузки
